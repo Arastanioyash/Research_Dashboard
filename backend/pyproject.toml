@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "research-dashboard-backend"
+version = "0.1.0"
+description = "FastAPI backend for research dashboard"
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi>=0.115.0",
+  "uvicorn[standard]>=0.30.0",
+  "pydantic>=2.8.0",
+  "pydantic-settings>=2.4.0",
+  "polars>=1.8.0",
+  "PyJWT>=2.9.0",
+  "passlib[bcrypt]>=1.7.4",
+  "python-multipart>=0.0.9",
+]
+
+[tool.setuptools]
+package-dir = {"" = "."}
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["app*"]
+
+[tool.uvicorn]
+factory = true
+host = "0.0.0.0"
+port = 8000
