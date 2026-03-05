@@ -1,8 +1,8 @@
 import './globals.css';
 
 export const metadata = {
-  title: 'Research Dashboard',
-  description: 'Interactive analytics dashboard built with Next.js and Plotly',
+  title: 'Research Dashboard UI',
+  description: 'Next.js survey dashboard with login and interactive charts',
 };
 
 export default function RootLayout({ children }) {
