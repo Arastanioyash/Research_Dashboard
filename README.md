@@ -1,23 +1,17 @@
 # Research Dashboard
 
-Next.js UI for survey analytics with a basic authentication page and interactive dashboard components.
+Research Dashboard workspace containing a Next.js frontend and a FastAPI backend skeleton.
 
-## Features
-- Login page (`/login`) with demo credentials
-- Protected dashboard page (`/dashboard`)
-- Single-select vs multi-select survey chart
-- Survey data table
-- Mean score KPI card for single-select questions
-
-## Demo credentials
-- Email: `admin@research.com`
-- Password: `Password@123`
-
-## Run locally
+## Frontend
 ```bash
 cd frontend
 npm install
 npm run dev
 ```
 
-Open `http://localhost:3000`.
+## Backend auth bootstrap
+The backend no longer uses hardcoded default credentials.
+
+1. Run migrations to create auth/RBAC tables.
+2. Set `ADMIN_EMAIL` and `ADMIN_PASSWORD`.
+3. Execute `python backend/scripts/bootstrap_admin.py` once to seed the first admin account.
